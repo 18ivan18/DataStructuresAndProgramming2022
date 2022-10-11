@@ -3,5 +3,10 @@
 ## How to contribute to this repo?
 - [This](https://www.dataschool.io/how-to-contribute-on-github/) is a very useful step by step guide of how to contribute to open source. Don't hesitate to ask if you have any questions.
 
+## Topics for small seminars
+ - auto
+ - std::functional and lambda functions, currying
+ - make, cmake, building process
+
 ## :pushpin: Content by weeks: 
 ### 1️⃣ Revision - pointers, big O notation and high order functions 

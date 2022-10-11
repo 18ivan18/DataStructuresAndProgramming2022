@@ -37,7 +37,7 @@ int main()
     delete i;
     delete i1;
     delete i2;
-    delete i3;
+    delete[] i3;
 
     float *f = new float(), *f1 = f;
     *f = 3.14f;
