@@ -8,5 +8,15 @@
  - std::functional and lambda functions, currying
  - make, cmake, building process
 
+## What books should I read?
+[Link](https://github.com/semerdzhiev/Reading-Lists/blob/master/Algorithms.adoc)
+
 ## :pushpin: Content by weeks: 
-### 1️⃣ Revision - pointers, big O notation and high order functions 
+### 1️⃣ [Revision - pointers, big O notation and high order functions](./week1) 
+### 2️⃣ [Data structures. Stack](./week2) 
+
+## Data structure implementations
+ - Stack
+    - Static Array
+    - Dynamic Array
+    - Array List
