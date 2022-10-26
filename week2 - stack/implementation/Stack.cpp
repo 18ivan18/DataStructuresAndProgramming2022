@@ -1,7 +1,7 @@
 #include "Stack.h"
 
 template <typename T>
-Stack<T>::Stack(/* args */) {}
+Stack<T>::Stack() {}
 
 template <typename T>
 void Stack<T>::push(T) {}
