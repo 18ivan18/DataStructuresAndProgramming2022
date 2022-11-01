@@ -14,7 +14,8 @@
 ## :pushpin: Content by weeks: 
 ### 1️⃣ [Revision - pointers, big O notation and high order functions](./week1) 
 ### 2️⃣ [Data structures. Stack](./week2) 
-### 2️⃣ [Queue](./week3) 
+### 3️⃣ [Queue](./week3) 
+### 4️⃣ [Linked List](./week4) 
 
 ## Data structure implementations
  - Stack
