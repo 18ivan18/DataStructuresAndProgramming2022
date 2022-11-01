@@ -14,9 +14,17 @@
 ## :pushpin: Content by weeks: 
 ### 1️⃣ [Revision - pointers, big O notation and high order functions](./week1) 
 ### 2️⃣ [Data structures. Stack](./week2) 
+### 2️⃣ [Queue](./week3) 
 
 ## Data structure implementations
  - Stack
     - Static Array
     - Dynamic Array
     - Array List
+ - Queue
+    - Array List
+    - Static Array
+ - Linked List
+   - Singly Linked List
+   - Double Linked List
+   - Circular Double Linked List
