@@ -42,6 +42,11 @@ int calculate(std::string s)
             {
                 int stackTop = stack.top();
                 stack.pop();
+                if (currentNumber == 0)
+                {
+                    // division by zero
+                    throw std::exception();
+                }
                 stack.push(stackTop / currentNumber);
             }
             operation = currentChar;
