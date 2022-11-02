@@ -30,7 +30,7 @@ int main()
 
     bool hasPositive = false;
     bool hasNegative = false;
-    for (int i = 0; i < warriors.size(); ++i)
+    for (int i = 0; i < warriors.size(); i++)
     {
         if (warriors[i]->attack < 0)
         {

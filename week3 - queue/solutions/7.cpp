@@ -42,7 +42,7 @@ int findShortestPathLength(std::vector<std::vector<int>> const &mat, std::pair<i
     int N = mat[0].size();
 
     // construct a `M × N` matrix to keep track of visited cells
-    std::vector<std::vector<bool>> visited;
+    std::vector<std::vector<bool>> visited; // = std::vector<bool>(M, std::vector<bool>(N))
     visited.resize(M, std::vector<bool>(N));
 
     // create an empty queue
