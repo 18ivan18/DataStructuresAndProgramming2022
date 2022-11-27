@@ -22,35 +22,14 @@ void print(Node<T> *head)
 }
 
 template <typename T>
-bool isBalanced(Node<T> *head)
+void balance(Node<T> *head)
 {
     Node<T> *prev = head, *curr = head->next;
     if (!head || !head->next || !head->next->next)
     {
-        return false;
+        return;
     }
-    while (curr->next->next)
-    {
-        if (prev->value + curr->next->value != curr->value)
-        {
-            return false;
-        }
-        prev = prev->next;
-        curr = curr->next;
-    }
-
-    return true;
-}
-
-template <typename T>
-bool makeTotal(Node<T> *head)
-{
-    if (isBalanced(head))
-    {
-        return true;
-    }
-    Node<T> *prev = head, *curr = head->next;
-    while (curr->next->next)
+    while (curr->next)
     {
         if (prev->value + curr->next->value == curr->value)
         {
@@ -63,8 +42,24 @@ bool makeTotal(Node<T> *head)
         prev = curr;
         curr = curr->next;
     }
+}
 
-    return false;
+template <typename T>
+bool makeTotal(Node<T> *head)
+{
+    Node<T> *prev = head, *curr = head->next;
+    while (curr->next)
+    {
+        if (prev->value + curr->next->value != curr->value)
+        {
+            balance(head);
+            return false;
+        }
+        prev = curr;
+        curr = curr->next;
+    }
+
+    return true;
 }
 
 template <typename T>

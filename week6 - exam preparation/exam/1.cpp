@@ -46,20 +46,25 @@ Node<T> *reverse(Node<T> *head, int from, int to)
 }
 
 template <typename T>
-Node<T> *reverseSublists(Node<T> *head, const std::vector<std::pair<int, int>> &intervals)
+Node<T> *reverseSublists(Node<T> *head, Node<std::pair<int, int>> *intervals)
 {
     int len = getLen(head);
-    for (auto &&[i, j] : intervals)
+    Node<std::pair<int, int>> *intervalsIter = intervals;
+    while (intervalsIter)
     {
+        auto &&[i, j] = intervalsIter->value;
         if (i > j || i >= len || j >= len || i < 0 || j < 0)
         {
             throw std::length_error("Index out of bounds.");
         }
+        intervalsIter = intervalsIter->next;
     }
 
-    for (auto &&[i, j] : intervals)
+    while (intervals)
     {
+        auto &&[i, j] = intervals->value;
         head = reverse(head, i, j);
+        intervals = intervals->next;
     }
 
     return head;
@@ -76,9 +81,21 @@ void print(Node<T> *head)
     std::cout << '\n';
 }
 
+template <typename T>
+void deleteList(Node<T> *head)
+{
+    while (head)
+    {
+        Node<T> *del = head;
+        head = head->next;
+        delete del;
+    }
+}
+
 int main()
 {
     Node<int> *head = new Node<int>(11, new Node<int>(4, new Node<int>(3, new Node<int>(7, new Node<int>(13, new Node<int>(4, new Node<int>(5)))))));
+    Node<std::pair<int, int>> *intervals = new Node<std::pair<int, int>>({1, 3}, new Node<std::pair<int, int>>({2, 5}, new Node<std::pair<int, int>>({5, 6})));
     print(head);
     // head = reverseSublists(head, {{4, 2}, {2, 5}, {5, 6}});
     // print(head);
@@ -86,13 +103,9 @@ int main()
     // head = reverseSublists(head, {{1, 3}, {2, 9}, {5, 6}});
     // print(head);
 
-    head = reverseSublists(head, {{1, 3}, {2, 5}, {5, 6}});
+    head = reverseSublists(head, intervals);
     print(head);
 
-    while (head)
-    {
-        Node<int> *del = head;
-        head = head->next;
-        delete del;
-    }
+    deleteList(head);
+    deleteList(intervals);
 }
