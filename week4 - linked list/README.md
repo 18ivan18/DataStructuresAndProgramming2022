@@ -307,15 +307,41 @@ Output: [1]
 **Follow up:** Could you do this in one pass?
 
 # Задача 8
-## Flatten a Linked List
+## Flatten a Multilevel Doubly Linked List
 
-Преобразувайте даден свързан списък от свързани списъци до сортиран свързан списък. 
+Даден ви е двойно свързан списък, който има върхове, които имат указател към следващия елемент, към предишния елемент и един допълнителен указател към наследник (child). Този допълнителен допълнителен указател може да сочи или да не сочи към отделен двойно свързан списък от същия вид. Тези списъци могат също да имат наследници и така се образуват много нива както е показано на картинката отдолу. 
+
+![](https://assets.leetcode.com/uploads/2021/11/09/flatten11.jpg)
+
+По дадено началото на първото ниво, изравнете списъка така, че всички върхове да са в двусързан списък на едно ниво. Ако `curr` е връх с наследници в един изравнен списък наследниците трябва да се появяват между `curr` и `curr->next`.
+
+Върнете началото на новия списък. Всички указатели към наследници трябва да са насочени към `null`.
+
 **Example 1:**
-
-![](https://www.techiedelight.com/wp-content/uploads/Flatten-linked-list.png)
 ```c++
-Input: head = [[1, 4, 6, 8], [2, 3, 7], [5, 9], [10, 11, 12]]
-Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Input: head = [1,2,3,4,5,6,null,null,null,7,8,9,10,null,null,11,12]
+Output: [1,2,3,7,8,11,12,9,10,4,5,6]
+Explanation: The multilevel linked list in the input is shown.
+After flattening the multilevel linked list it becomes:
+```
+![](https://assets.leetcode.com/uploads/2021/11/09/flatten12.jpg)
+
+**Example 2:**
+![](https://assets.leetcode.com/uploads/2021/11/09/flatten2.1jpg)
+
+```c++
+Input: head = [1,2,null,3]
+Output: [1,3,2]
+Explanation: The multilevel linked list in the input is shown.
+After flattening the multilevel linked list it becomes:
+```
+![](https://assets.leetcode.com/uploads/2021/11/24/list.jpg)
+
+**Example 3:**
+```c++
+Input: head = []
+Output: []
+Explanation: There could be empty list in the input.
 ```
 
 ## По-трудни задачи

@@ -147,13 +147,13 @@ skiplist.search(1); // return false, 1 has already been erased.
 # Задача 4
 ## Reverse specified portion of a linked list
 
-Обрънете реда на оказана част от свързан списък.
+Обрънете реда на оказана част от 0-индексиран свързан списък по дадени индекси.
 
 **Example 1:**
 ```c++
 Input:
 1 —> 2 —> 3 —> 4 —> 5 —> 6 —> 7 —> Ø
-start: 2, end: 5
+start: 1, end: 4
  
 Output: 1 —> 5 —> 4 —> 3 —> 2 —> 6 —> 7 —> Ø
 ```
