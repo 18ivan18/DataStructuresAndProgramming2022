@@ -113,7 +113,7 @@ Input: root = [4,2,7,1,3], val = 5
 Output: [4,2,7,1,3,5]
 Explanation: Another accepted tree is:
 ```
-![](https://assets.leetcode.com/uploads/2020/10/05/insertbst.jpg)
+![](https://assets.leetcode.com/uploads/2020/10/05/bst.jpg)
 
 **Example 2:**
 
