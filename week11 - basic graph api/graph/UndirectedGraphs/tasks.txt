@@ -1,0 +1,6 @@
+1. DFS/ DFS non-recursive
+2. BFS
+3. Cycle
+4. Bipartite
+5. Diametar and center
+6. Euler cycle
